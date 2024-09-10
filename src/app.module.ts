@@ -6,6 +6,7 @@ import { EventsController } from './events.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { EventsModule } from './events/events.module';
 
+// comment
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: 'mysql',
@@ -18,7 +19,7 @@ import { EventsModule } from './events/events.module';
     synchronize: true,
   }),
   TypeOrmModule.forFeature([Event]),
-  EventsModule
+    EventsModule
   ],
   controllers: [AppController, EventsController],
   providers: [AppService],
