@@ -34,7 +34,6 @@ export class EventsController {
 
     @Get(':id')
     async findOne(@Param('id', ParseIntPipe) id: number): Promise<Event> {
-        console.log(typeof id);
         return await this.repository.findOne({ where: { id } });
     }
 
